@@ -19,6 +19,7 @@ public class Exercises {
     /*
         this method should find a date in string
         note that it should be in british or american format
+        if there's no match for a date, return null
      */
     public String findDate(String string) {
         // todo
