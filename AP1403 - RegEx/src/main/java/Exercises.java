@@ -44,6 +44,8 @@ public class Exercises {
     /*
         you should return a list of *words* which are palindromic
         by word we mean at least 3 letters with no whitespace in it
+
+        note: your implementation should be case-insensitive, e.g. Aba -> is palindrome
      */
     public List<String> findPalindromes(String string) {
         List<String> list = new ArrayList<>();
