@@ -10,7 +10,7 @@ Enough of algorithms! Let's dive into a practical development tool called **RegE
 > Or perhaps you need to scan all incoming traffic to detect profanity or sensitive information?
 
 With **RegEx**, all of this becomes easy and efficient! It saves developers time and improves performance by eliminating unnecessary conditional checks.
-
+<br />
 
 <div align="center">
     <img src="cat.jpg" width="80%" alt="RegEx Cat" />
