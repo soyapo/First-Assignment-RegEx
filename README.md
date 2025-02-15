@@ -42,4 +42,4 @@ Follow the same structured approach as in the previous assignments:
 
 
 <br />
-Good luck, and happy coding! 🚀
+Good luck, and happy coding!
