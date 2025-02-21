@@ -66,6 +66,7 @@ public class TestPalindromes {
         expected.add("level");
         expected.add("racecar");
         expected.add("deed");
+        expected.add("noon");
 
         assertEquals(expected, ex.findPalindromes(input));
     }
