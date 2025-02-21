@@ -7,8 +7,8 @@
 # documentation.
 
 
-name: Exercise 1 workflow
-run-name: Exercise 1 tests
+name: TestDates workflow
+run-name: TestDates tests
 
 on: push
 
@@ -30,7 +30,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn -B package --file AP1403 - RegEx/pom.xml
+        run: mvn -B package --file pom.xml
 
       - name: Run JUnit tests
         run: mvn -B test -Dtest=TestDates
