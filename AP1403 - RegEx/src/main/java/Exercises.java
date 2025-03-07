@@ -9,7 +9,7 @@ public class Exercises {
         complete the method below, so it will validate an email address
      */
     public boolean validateEmail(String email) {
-        String regex = ""; // todo
+        String regex = ".*@.*?\\..*";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
 
@@ -21,9 +21,12 @@ public class Exercises {
         note that it should be in british or american format
         if there's no match for a date, return null
      */
-    public String findDate(String string) {
-        // todo
-        return null;
+    public static String findDate(String string) {
+        Pattern pattern = Pattern.compile("\\d{2}[\\/-]\\d{2}[\\/-]\\d{4}");
+        Matcher matcher = pattern.matcher(string);
+        if(matcher.find())
+            return string.substring(matcher.start(), matcher.start() + 10);
+        return "";
     }
 
     /*
@@ -37,8 +40,15 @@ public class Exercises {
         - has no white-space in it
      */
     public int findValidPasswords(String string) {
-        // todo
-        return -1;
+        String regex = "(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*])[A-Za-z\\d!@#$%^&*]{8,}";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(string);
+
+        int count = 0;
+        while(matcher.find())
+            count++;
+
+        return count;
     }
 
     /*
@@ -47,9 +57,19 @@ public class Exercises {
 
         note: your implementation should be case-insensitive, e.g. Aba -> is palindrome
      */
-    public List<String> findPalindromes(String string) {
+    public static List<String> findPalindromes(String string) {
         List<String> list = new ArrayList<>();
-        // todo
+
+        String regex = "\\b[a-zA-Z]{3,}\\b";
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(string);
+
+        while(matcher.find()){
+            String temp = matcher.group();
+            if(temp.toLowerCase().equals(new StringBuilder(temp.toLowerCase()).reverse().toString()))
+                list.add(temp);
+        }
+        
         return list;
     }
 
